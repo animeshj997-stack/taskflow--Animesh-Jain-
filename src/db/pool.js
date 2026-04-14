@@ -13,6 +13,12 @@ const pool = new Pool({
   connectionTimeoutMillis: 2000,
 });
 
+console.log(`host: ${process.env.DB_HOST}`);
+console.log(`port: ${process.env.DB_PORT}`);
+console.log(`database: ${process.env.DB_NAME}`);
+console.log(`user: ${process.env.DB_USER}`);
+console.log(`password: ${process.env.DB_PASSWORD}`);
+
 pool.on('error', (err) => {
   console.error('Unexpected error on idle client', err);
 });
