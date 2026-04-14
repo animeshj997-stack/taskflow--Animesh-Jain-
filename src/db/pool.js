@@ -11,6 +11,9 @@ const pool = new Pool({
   max: parseInt(process.env.DB_POOL_MAX, 10) || 20,
   idleTimeoutMillis: 30000,
   connectionTimeoutMillis: 2000,
+  ssl: {
+      rejectUnauthorized: false
+  }
 });
 
 console.log(`host: ${process.env.DB_HOST}`);
