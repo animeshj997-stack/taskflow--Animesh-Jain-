@@ -12,12 +12,6 @@ const options = {
         email: 'support@taskflow.com',
       },
     },
-    servers: [
-      {
-        url: `http://localhost:${process.env.PORT || 3000}`,
-        description: 'Development Server',
-      },
-    ],
     components: {
       securitySchemes: {
         bearerAuth: {
